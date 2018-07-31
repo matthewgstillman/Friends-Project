@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Friends</title>
+  </head>
+  <body>
+      <h1>Friends</h1>
+        <table style="width:26%">
+          <tr>
+            <th> NAME </th>
+            <th> AGE </th>
+            <th> FRIEND SINCE </th>
+          </tr>
+          {% for dict in users%}
+          <tr>
+          <td>{{dict['name']}}</td>
+          <td>{{dict['age']}}</td>
+          <td>{{dict['date']}}</td>
+          </tr>
+          {% endfor %}
+          </table>
+          <h1>Add a Friend</h1>
+          <form class="" action="/create" method="post">
+          Name: <input type="text" name="name" value=""><br>
+          Age: <input type="text" name="age" value=""><br>
+          <input type="submit" name="submit" value="submit">
+          </form>
+  </body>
+</html>
